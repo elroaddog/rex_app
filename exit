@@ -1,0 +1,271 @@
+[1mdiff --git a/public/index.html b/public/index.html[m
+[1mindex ca42db4..7d28407 100644[m
+[1m--- a/public/index.html[m
+[1m+++ b/public/index.html[m
+[36m@@ -2,240 +2,14 @@[m
+ <html>[m
+   <head>[m
+     <title>Friends of Rex</title>[m
+[31m-    <style type="text/css" media="screen">[m
+[31m-      body {[m
+[31m-        margin: 0;[m
+[31m-        margin-bottom: 25px;[m
+[31m-        padding: 0;[m
+[31m-        background-color: #f0f0f0;[m
+[31m-        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";[m
+[31m-        font-size: 13px;[m
+[31m-        color: #333;[m
+[31m-      }[m
+[31m-[m
+[31m-      h1 {[m
+[31m-        font-size: 28px;[m
+[31m-        color: #000;[m
+[31m-      }[m
+[31m-[m
+[31m-      a  {color: #03c}[m
+[31m-      a:hover {[m
+[31m-        background-color: #03c;[m
+[31m-        color: white;[m
+[31m-        text-decoration: none;[m
+[31m-      }[m
+[31m-[m
+[31m-[m
+[31m-      #page {[m
+[31m-        background-color: #f0f0f0;[m
+[31m-        width: 750px;[m
+[31m-        margin: 0;[m
+[31m-        margin-left: auto;[m
+[31m-        margin-right: auto;[m
+[31m-      }[m
+[31m-[m
+[31m-      #content {[m
+[31m-        float: left;[m
+[31m-        background-color: white;[m
+[31m-        border: 3px solid #aaa;[m
+[31m-        border-top: none;[m
+[31m-        padding: 25px;[m
+[31m-        width: 500px;[m
+[31m-      }[m
+[31m-[m
+[31m-      #sidebar {[m
+[31m-        float: right;[m
+[31m-        width: 175px;[m
+[31m-      }[m
+[31m-[m
+[31m-      #footer {[m
+[31m-        clear: both;[m
+[31m-      }[m
+[31m-[m
+[31m-      #header, #about, #getting-started {[m
+[31m-        padding-left: 75px;[m
+[31m-        padding-right: 30px;[m
+[31m-      }[m
+[31m-[m
+[31m-[m
+[31m-      #header {[m
+[31m-        background-image: url("assets/rails.png");[m
+[31m-        background-repeat: no-repeat;[m
+[31m-        background-position: top left;[m
+[31m-        height: 64px;[m
+[31m-      }[m
+[31m-      #header h1, #header h2 {margin: 0}[m
+[31m-      #header h2 {[m
+[31m-        color: #888;[m
+[31m-        font-weight: normal;[m
+[31m-        font-size: 16px;[m
+[31m-      }[m
+[31m-[m
+[31m-[m
+[31m-      #about h3 {[m
+[31m-        margin: 0;[m
+[31m-        margin-bottom: 10px;[m
+[31m-        font-size: 14px;[m
+[31m-      }[m
+[31m-[m
+[31m-      #about-content {[m
+[31m-        background-color: #ffd;[m
+[31m-        border: 1px solid #fc0;[m
+[31m-        margin-left: -55px;[m
+[31m-        margin-right: -10px;[m
+[31m-      }[m
+[31m-      #about-content table {[m
+[31m-        margin-top: 10px;[m
+[31m-        margin-bottom: 10px;[m
+[31m-        font-size: 11px;[m
+[31m-        border-collapse: collapse;[m
+[31m-      }[m
+[31m-      #about-content td {[m
+[31m-        padding: 10px;[m
+[31m-        padding-top: 3px;[m
+[31m-        padding-bottom: 3px;[m
+[31m-      }[m
+[31m-      #about-content td.name  {color: #555}[m
+[31m-      #about-content td.value {color: #000}[m
+[31m-[m
+[31m-      #about-content ul {[m
+[31m-        padding: 0;[m
+[31m-        list-style-type: none;[m
+[31m-      }[m
+[31m-[m
+[31m-      #about-content.failure {[m
+[31m-        background-color: #fcc;[m
+[31m-        border: 1px solid #f00;[m
+[31m-      }[m
+[31m-      #about-content.failure p {[m
+[31m-        margin: 0;[m
+[31m-        padding: 10px;[m
+[31m-      }[m
+[31m-[m
+[31m-[m
+[31m-      #getting-started {[m
+[31m-        border-top: 1px solid #ccc;[m
+[31m-        margin-top: 25px;[m
+[31m-        padding-top: 15px;[m
+[31m-      }[m
+[31m-      #getting-started h1 {[m
+[31m-        margin: 0;[m
+[31m-        font-size: 20px;[m
+[31m-      }[m
+[31m-      #getting-started h2 {[m
+[31m-        margin: 0;[m
+[31m-        font-size: 14px;[m
+[31m-        font-weight: normal;[m
+[31m-        color: #333;[m
+[31m-        margin-bottom: 25px;[m
+[31m-      }[m
+[31m-      #getting-started ol {[m
+[31m-        margin-left: 0;[m
+[31m-        padding-left: 0;[m
+[31m-      }[m
+[31m-      #getting-started li {[m
+[31m-        font-size: 18px;[m
+[31m-        color: #888;[m
+[31m-        margin-bottom: 25px;[m
+[31m-      }[m
+[31m-      #getting-started li h2 {[m
+[31m-        margin: 0;[m
+[31m-        font-weight: normal;[m
+[31m-        font-size: 18px;[m
+[31m-        color: #333;[m
+[31m-      }[m
+[31m-      #getting-started li p {[m
+[31m-        color: #555;[m
+[31m-        font-size: 13px;[m
+[31m-      }[m
+[31m-[m
+[31m-[m
+[31m-      #sidebar ul {[m
+[31m-        margin-left: 0;[m
+[31m-        padding-left: 0;[m
+[31m-      }[m
+[31m-      #sidebar ul h3 {[m
+[31m-        margin-top: 25px;[m
+[31m-        font-size: 16px;[m
+[31m-        padding-bottom: 10px;[m
+[31m-        border-bottom: 1px solid #ccc;[m
+[31m-      }[m
+[31m-      #sidebar li {[m
+[31m-        list-style-type: none;[m
+[31m-      }[m
+[31m-      #sidebar ul.links li {[m
+[31m-        margin-bottom: 5px;[m
+[31m-      }[m
+[31m-[m
+[31m-      .filename {[m
+[31m-        font-style: italic;[m
+[31m-      }[m
+[31m-    </style>[m
+[31m-    <script type="text/javascript">[m
+[31m-      function about() {[m
+[31m-        info = document.getElementById('about-content');[m
+[31m-        if (window.XMLHttpRequest)[m
+[31m-          { xhr = new XMLHttpRequest(); }[m
+[31m-        else[m
+[31m-          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }[m
+[31m-        xhr.open("GET","rails/info/properties",false);[m
+[31m-        xhr.send("");[m
+[31m-        info.innerHTML = xhr.responseText;[m
+[31m-        info.style.display = 'block'[m
+[31m-      }[m
+[31m-    </script>[m
+   </head>[m
+   <body>[m
+[31m-    <div id="page">[m
+[31m-      <div id="sidebar">[m
+[31m-        <ul id="sidebar-items">[m
+[31m-          <li>[m
+[31m-            <h3>Browse the documentation</h3>[m
+[31m-            <ul class="links">[m
+[31m-              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>[m
+[31m-              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>[m
+[31m-              <li><a href="http://www.ruby-doc.org/core/">Ruby core</a></li>[m
+[31m-              <li><a href="http://www.ruby-doc.org/stdlib/">Ruby standard library</a></li>[m
+[31m-            </ul>[m
+[31m-          </li>[m
+[31m-        </ul>[m
+[31m-      </div>[m
+[31m-[m
+[31m-      <div id="content">[m
+[31m-        <div id="header">[m
+[31m-          <h1>Welcome aboard</h1>[m
+[31m-          <h2>You&rsquo;re riding Ruby on Rails!</h2>[m
+[31m-        </div>[m
+[31m-[m
+[31m-        <div id="about">[m
+[31m-          <h3><a href="rails/info/properties" onclick="about(); return false">About your application&rsquo;s environment</a></h3>[m
+[31m-          <div id="about-content" style="display: none"></div>[m
+[31m-        </div>[m
+[31m-[m
+[31m-        <div id="getting-started">[m
+[31m-          <h1>Getting started</h1>[m
+[31m-          <h2>Here&rsquo;s how to get rolling:</h2>[m
+[31m-[m
+[31m-          <ol>[m
+[31m-            <li>[m
+[31m-              <h2>Use <code>rails generate</code> to create your models and controllers</h2>[m
+[31m-              <p>To see all available options, run it without parameters.</p>[m
+[31m-            </li>[m
+[32m+[m[32m    <p><b>PAGE UNDER CONSTRUCTION</b>[m
+ [m
+[31m-            <li>[m
+[31m-              <h2>Set up a default route and remove <span class="filename">public/index.html</span></h2>[m
+[31m-              <p>Routes are set up in <span class="filename">config/routes.rb</span>.</p>[m
+[31m-            </li>[m
+[32m+[m[32m      <hr>[m
+[32m+[m[32m      <hr>[m
+ [m
+[31m-            <li>[m
+[31m-              <h2>Create your database</h2>[m
+[31m-              <p>Run <code>rake db:create</code> to create your database. If you're not using SQLite (the default), edit <span class="filename">config/database.yml</span> with your username and password.</p>[m
+[31m-            </li>[m
+[31m-          </ol>[m
+[31m-        </div>[m
+[31m-      </div>[m
+[32m+[m[32m      Please come back and visit.</p>[m
+ [m
+[31m-      <div id="footer">&nbsp;</div>[m
+[31m-    </div>[m
+   </body>[m
+[31m-</html>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/public/underconstruction.html b/public/underconstruction.html[m
+[1mindex 36cccb6..d3f5a12 100644[m
+[1m--- a/public/underconstruction.html[m
+[1m+++ b/public/underconstruction.html[m
+[36m@@ -1,15 +1 @@[m
+[31m-<!DOCTYPE html>[m
+[31m-<html>[m
+[31m-	<head>[m
+[31m-		<title>Friends of Rex</title>[m
+[31m-	</head>[m
+[31m-	<body>[m
+[31m-		<p><b>PAGE UNDER CONSTRUCTION</b>[m
+ [m
+[31m-			<hr>[m
+[31m-			<hr>[m
+[31m-[m
+[31m-			Please come back and visit.</p>[m
+[31m-[m
+[31m-	</body>[m
+[31m-</html>[m
